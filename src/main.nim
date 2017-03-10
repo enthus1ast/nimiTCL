@@ -46,6 +46,8 @@ while true:
   try:
     let res = $(ctx.eval(stdin.readLine()))
     if res != "": echo res
+  except ValueError:
+    echo getCurrentExceptionMsg()
   except IOError:
     echo "Exiting."
     break
